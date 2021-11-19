@@ -1,0 +1,290 @@
+/************ GENERAL STYLING *************/
+/* Body */
+body {
+    margin: 0%;
+}
+
+/* H1 elements */
+h1 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Trebuchet MS', Optima, sans-serif; */
+    text-align: center;
+    margin-top: 3%;
+    color: #1a1a1a;
+}
+
+h1:hover {
+    filter: grayscale(5%);
+    transform: scale(1.1);
+    transition: tranform 1s;
+}
+
+/* portfolio title text */
+.white-text {
+    color: #fff;
+}
+
+/* Paragraph elements */
+p {
+    font-family: Perpetua, Rockwell Extra Bold;
+    text-align: justify;
+    letter-spacing: 1px;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+p:hover {
+    transition: tranform 1s;
+    transform: scale(1.01);
+}
+
+/* center class */
+.center {
+    text-align: center;
+}
+
+.center:hover {
+    transition: transform 2s;
+    transform: scale(1.1);
+}
+
+/* Anchor elements */
+a {
+    color: #185ADB;
+}
+
+/* Quotation elements */
+q {
+    font-style: italic;
+}
+
+/* Image elements */
+img {
+    filter:grayscale(75%);
+    border-radius: 8px;
+    max-width: 100%;
+    height: 340px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img:hover {
+    filter: grayscale(5%);
+    transition: tranform 1s;
+    transform: scale(1.1);
+}
+
+/* Adjust image formatting for smaller screens */
+@media screen and (max-width: 576px) {
+    img {
+        height: 100px;
+        margin-top: 150px;
+    }
+}
+
+/* Styling for footer element */
+footer {
+    padding: 2%;
+    background-color: #fff;
+}
+
+/************** END OF GENERAL STYLING *******************/
+
+/************** NAVBAR STYLING *******************/
+.navbar {
+    overflow: hidden;
+    background-color: #22577A;
+    position: fixed; /* keep navbar at top of screen */
+    top: 0;
+    width: 100%;
+    z-index: 1; /* keep navbar displayed above other elements */
+    -webkit-animation: moveNav 4s; /* for Safari 4.0-8.0 */
+    animation: moveNav 4s; /* for all other browsers */
+}
+
+/* moveNav animation effect, navbar moves in from the left */
+@keyframes moveNav {
+    from {left: -100vw;} /* navbar is starts off screen to the left */
+    to {left: 0vw;} /*moves the navbar into place on the screen */
+}
+
+
+/* navbar links */
+.navbar a {
+    float: left;
+    display: block; /* keeps text on same line */
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none; /* removes underline */
+    font-family: Avant Garde, Helvetica;
+    font-size: 20px;
+    text-align: center;
+    position: relative; 
+    -webkit-animation: moveNavText 4.7s; /* animation for Safari 4.0 - 8.0 */
+    animation: moveNavText 4.7s; /* for all other browsers */
+}
+
+/* moveNavText animation effect for moving the navbar text from above the view to the navbar */
+@keyframes moveNavText {
+    from {top: -100vw;} /* this sets the navbar text 100% above the viewport */
+    to {top: 0vw;} /* this lowers the navbar text onto the navbar */
+}
+
+/* Screens 576px and smaller will display navbar equally distributed */
+@media screen and (max-width: 576px) {
+    .navbar a {
+        width: 25%;
+        font-size: 12px;
+    }
+}
+
+/* navbar hover effects */
+.navbar a:hover {
+    background-color: #f4f4f4;
+    color: black;
+    font-weight: bold;
+}
+
+/* navbar home button */
+.navbar a.active {
+    background-color: darkgray;
+}
+/************** END OF NAVBAR STYLING *******************/
+
+/************** VIDEO STYLING *******************/
+/* Formatting for background video */
+#Forest_Video {
+    position: fixed;
+    right:0;
+    bottom: 0;
+    min-width: 100%;
+    z-index: -1; /* keep behind other elements */
+}
+
+/* Screens 576px and smaller will not display background video */
+@media screen and (max-width: 576px) {
+    #Forest_Video {
+        display: none;
+    }
+}
+
+/* Text overlay over video */
+.video-text {
+    background-color: rgba(0,0,0,0.5); /* semi-transparent background */
+    color: white;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    -webkit-animation: moveVideoText 5.75s;
+    animation: moveVideoText 5.75s;
+}
+
+/* This animation effect causes the overlay video text to move up from the bottom of the page upon page load*/
+@keyframes moveVideoText {
+    from {top: -100vw;} /*sets the position of video text above the viewport */
+    to {top: 0vw;} /* moves the video text to the normal positioning of the viewport */
+    
+}
+/************** END OF VIDEO STYLING *******************/
+
+/************** TABLE STYLING - columns and rows within the table *******************/
+* {
+    box-sizing: border-box; /* creates box with border where most of the text will go */
+}
+
+.column1 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    padding-top: 3%; /* space between top of column and headings */
+    height: 450px;
+    background-color: #E8E8E8;
+}
+
+/* Screens 576px and smaller will display a scroll bar if the text overflows the column height */
+@media screen and (max-width: 576px) {
+    .column1 {
+        overflow: auto;
+    }
+}
+
+.column2 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    padding-top: 1.9%;
+    height: 450px;
+    background-color: #5588A3;
+}
+
+/* Applies to the columns in the final row*/
+.columnTall {
+    padding-top: 3.5%;
+    height: 500px;
+    /* height: 460px; */
+}
+
+/* Inserts something after the row content */
+.row::after {
+    content: ""; /* keeps footer below column */
+    display: table; 
+    clear: both; /* clears any other elements from floating on the left or right of an element */
+}
+/************** END OF TABLE STYLING *******************/
+
+/************** CONTACT FORM STYLING *******************/
+/* input [type=text] targets all text input sections of the contact form */
+input[type=text] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    font-family: Perpetua, Rockwell Extra Bold;
+}
+
+/* Hover effects for input boxes */
+input[type=text]:hover {
+    box-shadow: 0 0 5px #00004d inset;
+}
+
+/* Submit button */
+input[type=submit] {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Perpetua, Rockwell Extra Bold;
+}
+
+/* Hover effect for submit button */
+input[type=submit]:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.5);
+    transition: transform 1.5s;
+}
+
+/* Form element */
+form {
+    border-radius: 5px;
+    background-color: #E8E8E8;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    /* font-family: "Trebuchet MS", Optima; */
+}
+/************** END OF CONTACT FORM STYLING *******************/
+

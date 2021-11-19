@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <title>Serena Vogt</title>
+        <link rel="stylesheet" type="text/css" href="css/portfolio.css">
+    </head>
+
+    <body class="background">
+        <!--Navbar-->
+        <div class="navbar">
+            <a class="active" href="#Home">Home</a>
+            <a href="#About">About</a>
+            <a href="#GitHub">GitHub</a>
+            <a href="#Contact">Contact</a>
+        </div>
+
+        <br>
+        <br>
+
+        <!--Background Video-->
+        <div id="Home">
+            <video autoplay muted loop id="Forest_Video">
+                <source src="images/video/Background - 9584.mp4" type="video/mp4">
+                <!--Display message if video fails to load-->
+                Your browswer does not support HTML5 video.
+            </video>
+        </div>
+
+        <!--Video text overlay-->
+        <div class="video-text">
+            <h1 class="white-text">Serena Vogt's Portfolio</h1>
+            <strong>
+                <p class="center">
+                    <q>A ship in port is safe, but that is not what ships are for. Sail out to sea and do new things.
+                    </q>
+                    <br> -Rear Admiral Grace Hopper
+                    <br>
+                    <br> My name is Serena Vogt. Welcome to my portfolio website. Read more about my background and experience below.
+                    <br>
+                    <br> Thank you for stopping by!
+                </p>
+            </strong>
+        </div>
+
+        <!--About Section-->
+        <div class="row" id="About">
+            <!--Left Column-->
+            <div class="column2">
+                <img src="images/pexels-pixabay-414630.jpg" alt="coffee and computer">
+            </div>
+            <!--Right Column-->
+            <div class="column1">
+                <h1>About</h1>
+                <p>I am a Junior Developer located in the PNW fueled entirely by a combination of curiosity and coffee. My love of math, science, 
+                    and technology seemed to naturally lead me to programming. When I'm not nose-first in a computer screen or a book, 
+                    you can usually find me hanging out with my dog and my husband, binging something on Netflix, discovering new recipes and 
+                    restaurants, or digging up long lost records as the designated family historian.<br>
+                    <br> I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>'s 
+                    Software Developer Boot Camp, and trained and experienced in the following web and programming languages: 
+                    HTML, CSS, JavaScript, SQL, C++, Java, and more. 
+                    <br>
+                    <br> I am a full-stack developer and would love to work with you on your project. <a href="#Contact">Contact</a> me below!
+                </p>
+            </div>
+        </div>
+
+        <!--GitHub section-->
+        <div class="row" id="GitHub">
+            <!--Left Column-->
+            <div class="column1">
+                <h1>GitHub</h1>
+                <p>Check out my coding projects on GitHub, stay tuned for more...
+                    <br>
+                    <p class="center"><a href="https://github.com/sseyler0119" target="_blank">Serena Vogt GitHub</a></p>
+                </p>
+            </div>
+            <!--Right Column-->
+            <div class="column2">
+                <a href="https://github.com/sseyler0119" target="_blank">
+                    <img src="images/GitHub.png" alt="GitHub Logo"></a>
+            </div>
+        </div>
+
+        <!--Contact Section-->
+        <div class="row" id="Contact">
+            <!--Contact image, left column-->
+            <div class="column2 columnTall">
+                <img src="images/pexels-photo-3184454.jpeg" alt="laptop in workspace">
+            </div>
+            <!--Contact form, right column-->
+            <div class="column1 columnTall">
+                <h1>Contact</h1>
+                <form action="https://formspree.io/f/moqygkvg" method="POST">
+                    <label>Name:</label>
+                        <input type="text" placeholder="Please enter your name here">
+                    <label>Email:</label>
+                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
+                    <label>Message:</label>
+                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
+                        <input type="submit" value="SUBMIT">
+                </form>
+            </div>
+        </div>
+
+        <!--Footer Section-->
+        <footer>
+            <p>
+               <p class="center">&copy Serena Vogt 2021</p>
+            </p>
+        </footer>
+    </body>
+</html>

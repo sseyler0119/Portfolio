@@ -35,13 +35,13 @@ h1 {
 /* h1 hover effect */
 h1:hover {
     filter: grayscale(5%);
-    transform: scale(1.1);
+    transform: scale(1.01);
     transition: tranform 1s;
 }
 
 /* portfolio title text */
 .white-text {
-    color: #fff;
+    color: #f8f9fa;
     padding-top: 10vh; /* padding-top = 10% of viewport height */
 }
 
@@ -71,10 +71,15 @@ p:hover {
 }
 
 /* Anchor elements */
-a {
-    color: #185ADB;
+.links {
+    color: #3F37C9;
     cursor: pointer;
-    text-decoration: underline;
+    text-decoration: none;
+}
+
+.links:hover {
+    color: #3A0CA3;
+    font-weight: bold;
 }
 
 /* Quotation elements */
@@ -92,7 +97,6 @@ img {
     margin: auto auto auto auto; /* center all images */
 }
     
-
 img:hover {
     filter: grayscale(5%);
 }
@@ -100,8 +104,16 @@ img:hover {
 /* Styling for footer element */
 footer {
     padding: 2%;
-    background-color: #fff;
+    background-color: #f8f9fa;
 }
+
+.footer-icon {
+    background-color:  #22577A;
+    color: #f8f9fa;
+    padding: 4px;
+    border-radius: 8px;
+}
+
 /************** END OF GENERAL STYLING *******************/
 
 /************** NAVBAR STYLING *******************/
@@ -126,7 +138,7 @@ footer {
 .navbar a {
     float: left;
     display: block; /* keeps text on same line */
-    color: white;
+    color: #f8f9fa;
     padding: 0.75vw 1vw;
     text-decoration: none; /* removes underline */
     font-family: Avant Garde, Helvetica;
@@ -154,7 +166,7 @@ footer {
 
 /* navbar home button */
 .navbar a.active {
-    background-color: darkgray;
+    background-color: #adb5bd;
 }
 /************** END OF NAVBAR STYLING *******************/
 
@@ -178,7 +190,7 @@ footer {
 /* Text overlay over video */
 .video-text {
     background-color: rgba(0,0,0,0.5); /* semi-transparent background */
-    color: white;
+    color: #f8f9fa;
     width: 100%;
     height: 100vh; /* fills the height of the viewport so slideshow is not partially displayed */
     padding-top: 2vh;
@@ -252,12 +264,12 @@ footer {
 .previous:hover,
 .next:hover {
     background-color: rgba(0,0,0,0.8);
-    color: #fff;
+    color: #f8f9fa;
 }
 
 /* slideshow text */
 .text {
-    color: #fff;
+    color: #f8f9fa;
     padding: 1vw;
     position: absolute; /*ensures text is positioned within image */
     bottom: 0; /* sets the text at the bottom of the image */
@@ -277,7 +289,7 @@ footer {
     height: 1vw;
     width: 1vw;
     margin: 0.25vw; /* increase spacing between dots */
-    background-color: #fff;
+    background-color: #f8f9fa;
     border-radius: 50%; /* makes dots round */
     display: inline-block; /* keeps dots on the same line */
     /*dots transition to diff color when clicked or hovered over*/
@@ -321,6 +333,7 @@ footer {
     padding: 1.6%;
     height: 510px;
     background-color: #E8E8E8;
+    overflow: auto; /* insert scrollbar to prevent text overflow */
 }
 
 .column2 {
@@ -329,6 +342,7 @@ footer {
     padding: 1.6%;
     height: 510px;
     background-color: #5588A3;
+    overflow: auto; /* insert scrollbar to prevent text overflow */
 }
 
 /* Inserts something after the row content */
@@ -337,6 +351,34 @@ footer {
     display: table; 
     clear: both; /* clears any other elements from floating on the left or right of an element */
 }
+
+/********************** SCROLLBAR settings if text overflows y-axis in column text ****************/
+/* scrollbar width */
+.column1::-webkit-scrollbar, 
+.column2::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* scrollbar track */
+.column1::-webkit-scrollbar-track,
+.column2::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #f8f9fa;
+    border-radius: 8px;
+}
+
+/* scrollbar handle */
+.column1::-webkit-scrollbar-thumb,
+.column2::-webkit-scrollbar-thumb {
+    background-color: #5588A3;
+    border-radius: 8px;
+}
+
+/* scrollbar handle on hover */
+.column1::-webkit-scrollbar-thumb:hover,
+.column2::-webkit-scrollbar-thumb:hover {
+    background-color: #22577A;
+}
+
 /************** END OF TABLE STYLING *******************/
 
 /************** CONTACT FORM STYLING *******************/
@@ -347,8 +389,8 @@ footer {
     bottom: 1.75vw; /* positioned slightly up from bottom of viewport */
     right: 1.75vw; /* positioned slightly right from the side of the viewport */
     width: 25vw; /* sets the width relative to the viewport width, 25% */
-    background-color: #fff;
-    color: black;
+    background-color: #22577A;
+    color: #f8f9fa;
     border: solid black;
     cursor: pointer;
     -webkit-animation: movePopup 5s; /* animation for 5s for Safari 4.0-8.0 */
@@ -380,7 +422,7 @@ footer {
 .form-container {
     max-width: 49vw; /* keep form container @ 49% of viewport width */
     padding: 1vw;
-    background-color: #fff;
+    background-color: #f8f9fa;
 }
 
 /* input fields */
@@ -389,7 +431,7 @@ footer {
     padding: 0.93vw; /* padding for input boxes */
     margin: 0.6vw 0 0.6vw 0; /* adds space between input boxes/labels */
     border: none; /* removes border from input boxes */
-    background: gainsboro;
+    background: #adb5bd;
     font-size: 1vw;
 }
 
@@ -408,17 +450,17 @@ button {
 /* hover effect for contact and submit buttons */
 button:hover,
 .form-container .btn:hover {
-    color: #fff;
-    background-color: black;
+    color: #22577A;
+    background-color: #f8f9fa;
     transition-duration: 1s;
     -webkit-transition-duration: 1s; /* Safari 4.0-8.0 */
-    border-color: silver;
+    border: 2pt solid #22577A;
 }
 
 /* submit button */
 .form-container .btn {
-    background-color: #fff;
-    color: black;
+    background-color: #22577A;
+    color: #f8f9fa;
     border-color: black;
     margin-bottom: 1vh; /* adds space between the submit and the close button */
 }
@@ -426,14 +468,14 @@ button:hover,
 /* close button */
 .form-container .cancel {
     background-color: black;
-    color: #fff;
+    color: #f8f9fa;
     border-color: gray;
 }
 
 /* styling for close button on hover */
 .form-container .cancel:hover {
-    color: #fff;
-    background-color: darkred;
+    color: #f8f9fa;
+    background-color: #adb5bd;
     transition-duration: 1s;
     -webkit-transition-duration: 1s;
     border-color: black;

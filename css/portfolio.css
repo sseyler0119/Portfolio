@@ -180,10 +180,21 @@ footer {
     z-index: -1; /* keep behind other elements */
 }
 
-/* Screens 576px and smaller will not display background video */
+/* Screens 576px and smaller will not display background video
+    replace video with image */
 @media screen and (max-width: 576px) {
     #Forest_Video {
         display: none;
+    }
+
+    .video-text {
+        background: url(../images/trees.jpg) !important;       
+        background-size: 100% !important; 
+        background-repeat: no-repeat !important;
+        color: #f8f9fa !important;
+        height: 100% !important;
+        padding-bottom: 2vh !important;
+        padding-top: 2vh !important;
     }
 }
 
